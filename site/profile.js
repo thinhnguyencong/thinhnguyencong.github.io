@@ -190,11 +190,6 @@ window.PROFILE = {
       detail: "AI research intern (2021) → AI researcher (2021–2023) → head of the R&D department (2023–2025)",
     },
     {
-      title: "Teaching Assistant, Data Mining",
-      institution: "Hanoi University of Science and Technology",
-      date: "Spring 2023",
-    },
-    {
       title: "Undergraduate & Graduate Researcher",
       institution: "Faculty of Mathematics and Informatics, Hanoi University of Science and Technology",
       date: "2020.06 → 2024.07",

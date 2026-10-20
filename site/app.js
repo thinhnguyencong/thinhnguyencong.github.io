@@ -187,6 +187,7 @@ byId("experience-list").replaceChildren(
     const row = make("article", "item");
     const body = make("div");
     body.append(make("h3", "", item.title), make("p", "", item.institution));
+    if (item.detail) body.append(make("p", "fine", item.detail));
     if (item.people) body.append(people(item.people));
     row.append(when(item.date), body);
     return row;

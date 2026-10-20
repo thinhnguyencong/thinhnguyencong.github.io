@@ -17,7 +17,7 @@ window.PROFILE = {
   status: "Open to collaborations",
   bio:
     "I work on quantum optimization: how to cast hard combinatorial problems as Ising and QUBO Hamiltonians, and how to solve them well on quantum annealers and on classical hardware at scale. My research spans hardware-aware quantum annealing, spectral and learning-based methods for large-scale Ising optimization, and machine learning on graphs for combinatorial problems. Before my PhD I studied Mathematics and Informatics at Hanoi University of Science and Technology, worked on graph learning at HySonLab, and led the R&D department of a Vietnamese fintech company, building AI systems for finance.",
-  photo: "assets/profile.jpg",
+  photo: "assets/portrait.jpg",
   photoLabel: "|thinh⟩.jpg",
   email: "nguyencongt@vcu.edu",
   github: "https://github.com/hydrogen1999",

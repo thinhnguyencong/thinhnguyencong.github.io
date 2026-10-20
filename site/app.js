@@ -182,6 +182,40 @@ byId("publication-list").replaceChildren(
   }),
 );
 
+/* projects, filterable by kind */
+const kindLabels = { quantum: "|quantum⟩", ai: "|ai⟩", blockchain: "|blockchain⟩" };
+const projectCards = (profile.projects || []).map((item) => {
+  const card = make("article", "project");
+  card.dataset.kind = item.kind;
+  const meta = make("div", "meta");
+  meta.append(make("b", "", kindLabels[item.kind] || item.kind), make("span", "", item.date));
+  card.append(meta, make("h3", "", item.title), make("p", "where", item.where), make("p", "", item.text));
+  const chips = make("div", "chips");
+  (item.tags || []).forEach((tag) => chips.append(make("span", "", tag)));
+  card.append(chips);
+  const links = Object.entries(item.links || {}).filter(([, url]) => url);
+  if (links.length) {
+    const actions = make("div", "actions");
+    links.forEach(([label, url]) => actions.append(external(make("a", "", label + " ↗"), url)));
+    card.append(actions);
+  }
+  return card;
+});
+byId("project-list").replaceChildren(...projectCards);
+
+const kinds = ["all", ...new Set((profile.projects || []).map((item) => item.kind))];
+const filterButtons = kinds.map((kind) => {
+  const button = make("button", "", kind === "all" ? "Σ all" : kindLabels[kind] || kind);
+  button.type = "button";
+  button.setAttribute("aria-pressed", String(kind === "all"));
+  button.addEventListener("click", () => {
+    filterButtons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+    projectCards.forEach((card) => (card.hidden = kind !== "all" && card.dataset.kind !== kind));
+  });
+  return button;
+});
+byId("project-filters").replaceChildren(...filterButtons);
+
 byId("experience-list").replaceChildren(
   ...profile.experience.map((item) => {
     const row = make("article", "item");

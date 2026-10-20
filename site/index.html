@@ -142,6 +142,24 @@
     .state p{margin:0;font-size:.86rem;line-height:1.55;color:var(--ink-2)}
     .states-note{margin:10px 0 0;font:400 .66rem var(--mono);color:var(--muted)}
 
+    .filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;font:400 .68rem var(--mono)}
+    .filters button{padding:4px 10px;border:1px solid var(--line-2);background:none;color:var(--muted);font:inherit;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+    .filters button:hover{color:var(--accent);border-color:var(--accent)}
+    .filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .project{position:relative;display:flex;flex-direction:column;padding:14px 16px 14px;border:1px solid var(--line);background:var(--glass-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:border-color .3s,transform .3s,opacity .35s}
+    .project:before{content:"";position:absolute;inset:-1px;border:1px solid transparent;background:linear-gradient(120deg,var(--accent-2),var(--accent)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none}
+    .project:hover{transform:translateY(-2px)}
+    .project:hover:before{opacity:1}
+    .project[hidden]{display:none}
+    .project .meta{display:flex;justify-content:space-between;gap:12px;font:400 .64rem var(--mono);color:var(--muted)}
+    .project .meta b{font-weight:500;color:var(--accent)}
+    .project h3{margin:8px 0 6px;font:550 .96rem/1.35 var(--sans);letter-spacing:-.014em}
+    .project p{margin:0;font-size:.84rem;line-height:1.55;color:var(--ink-2)}
+    .project .where{margin:0 0 8px;font:400 .68rem var(--mono);color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px}
+    .chips span{padding:1px 7px;border:1px solid var(--line);font:400 .62rem var(--mono);color:var(--muted)}
+    .project .actions{margin-top:10px}
     .paper{padding:14px 0;border-bottom:1px solid var(--line)}
     .paper-venue{margin:0 0 4px;font:500 .66rem var(--mono);color:var(--accent);letter-spacing:.01em}
     .paper h3{margin:0 0 5px;font:500 .96rem/1.42 var(--sans);letter-spacing:-.014em}
@@ -176,7 +194,7 @@
       .hero-grid{grid-template-columns:minmax(0,1fr) 220px;gap:40px}
       .sec{grid-template-columns:1fr;gap:16px}
       .sec-head{position:static}
-      .states{grid-template-columns:1fr}
+      .states,.projects{grid-template-columns:1fr}
       .state + .state{padding-left:0;border-left:0}
     }
     @media (max-width:680px){
@@ -214,6 +232,7 @@
         <a href="#publications" data-section="publications">|papers⟩</a>
         <a href="#education" data-section="education">|education⟩</a>
         <a href="#experience" data-section="experience">|experience⟩</a>
+        <a href="#projects" data-section="projects">|projects⟩</a>
         <a href="#news" data-section="news">|news⟩</a>
         <a href="#honors" data-section="honors">|honors⟩</a>
         <a id="cv-link" href="#" target="_blank" rel="noreferrer" hidden>|cv⟩</a>
@@ -286,6 +305,16 @@
       <div class="wrap sec">
         <div class="sec-head"><h2>Experience<span class="ket">|work⟩</span></h2></div>
         <div class="list reveal" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap sec">
+        <div class="sec-head"><h2>Projects<span class="ket">Σ |project⟩⟨project|</span></h2></div>
+        <div class="reveal">
+          <div class="filters" id="project-filters" role="group" aria-label="Filter projects"></div>
+          <div class="projects" id="project-list"></div>
+        </div>
       </div>
     </section>
 

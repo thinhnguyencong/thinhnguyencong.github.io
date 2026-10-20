@@ -137,6 +137,80 @@ window.PROFILE = {
     },
   ],
 
+  // kind: "quantum" | "ai" | "blockchain" (drives the filter buttons)
+  projects: [
+    {
+      kind: "quantum",
+      title: "DSN: Differentiable Spectral Normalization",
+      where: "IJCAI 2026 · VCU",
+      date: "2026",
+      text: "Treats graph normalization as a learnable variable: a positive diagonal metric is optimized by projected gradient ascent with exact Hellmann–Feynman gradients to tighten a spectral bound for Ising ground states. Near-linear cost, scales to 8.4M-node graphs, within 1–3% of simulated annealing at up to 190× lower runtime.",
+      tags: ["Ising", "spectral methods", "CuPy"],
+      links: {
+        Paper: "https://doi.org/10.24963/ijcai.2026/258",
+        Code: "https://github.com/hydrogen1999/dsn-ising",
+      },
+    },
+    {
+      kind: "quantum",
+      title: "Closed-form QUBO for graph partitioning & image segmentation",
+      where: "Open source",
+      date: "2026",
+      text: "Minimum vertex cover, seeded image segmentation and graph reconstruction written as one hand-built QUBO and minimized by a single annealing sampler; every result is checked against an exact reference (exhaustive search, max-flow) and reported as an energy gap. Annealer-ready for D-Wave without reformulation.",
+      tags: ["QUBO", "simulated annealing", "D-Wave Ocean"],
+      links: {
+        Code: "https://github.com/hydrogen1999/qubo-partition",
+      },
+    },
+    {
+      kind: "ai",
+      title: "LLM-based investment advisor",
+      where: "Grooo International",
+      date: "2024 → 2025",
+      text: "Hybrid agent-based assistant built on an open-source mixture-of-experts LLM, with retrieval-augmented generation over live market data and ReAct-style tool use, fine-tuned for Vietnamese financial language.",
+      tags: ["LLM agents", "RAG", "ReAct"],
+      links: {},
+    },
+    {
+      kind: "ai",
+      title: "AI Insight: multi-factor stock screening",
+      where: "Grooo International",
+      date: "2024 → 2025",
+      text: "Real-time screening that combines quantitative, technical and cash-flow factors with NLP news sentiment; graph neural networks model inter-stock relationships and a GraphRAG pipeline answers questions over the financial knowledge graph.",
+      tags: ["GNN", "GraphRAG", "NLP"],
+      links: {},
+    },
+    {
+      kind: "ai",
+      title: "Document AI: OCR & key information extraction",
+      where: "Grooo International",
+      date: "2021 → 2024",
+      text: "Pipelines for invoices, ID cards and business cards: DBNet text detection, SVTR/SPADE recognition and extraction, LayoutLMv3 for layout-aware entity extraction, and a fine-tuned PhoBERT for Vietnamese NER.",
+      tags: ["OCR", "LayoutLMv3", "PhoBERT"],
+      links: {},
+    },
+    {
+      kind: "blockchain",
+      title: "Secure document signing on Layer-2 blockchain",
+      where: "HUST",
+      date: "2023",
+      text: "Decentralized document management on Polygon and IPFS: documents are minted as NFTs and approved and signed through EVM smart contracts, giving tamper-evident storage and an auditable signing flow.",
+      tags: ["Polygon", "IPFS", "Solidity"],
+      links: {
+        Paper: "https://doi.org/10.51316/jst.174.ssad.2024.34.2.6",
+      },
+    },
+    {
+      kind: "blockchain",
+      title: "AgriTrace: blockchain food traceability",
+      where: "HUST · B.Sc. thesis",
+      date: "2020 → 2022",
+      text: "Permissioned traceability system on Hyperledger Fabric for a consortium of supply-chain actors, improving transparency and data immutability from farm to shelf.",
+      tags: ["Hyperledger Fabric", "Go chaincode"],
+      links: {},
+    },
+  ],
+
   education: [
     {
       institution: "Virginia Commonwealth University",

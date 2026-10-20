@@ -52,6 +52,10 @@ window.PROFILE = {
       text: "Presented DSN at **IJCAI 2026** (talk + poster), supported by a VCU Department of Computer Science travel award.",
     },
     {
+      date: "2026.06",
+      text: "Presented the poster **Quantum Ready Image Segmentation for Image Forgery Localization** at DFRWS USA 2026.",
+    },
+    {
       date: "2026.01",
       text: "Started my PhD in Computer Science at Virginia Commonwealth University.",
     },
@@ -97,11 +101,11 @@ window.PROFILE = {
     {
       authors: [
         { name: "T. Nguyen-Cong", self: true },
-        { name: "S. Gyawali" },
+        { name: "S. Gyawali", url: "https://www.linkedin.com/in/sanskritigyawali" },
         { name: "T. N. Dinh", url: "https://thang-dinh.github.io/" },
       ],
       title: "Quantum Ready Image Segmentation for Image Forgery Localization",
-      venue: "DFRWS 2026 · Poster",
+      venue: "DFRWS USA 2026 · Poster",
       links: {
         Code: "https://github.com/hydrogen1999/qubo-partition",
       },
@@ -166,7 +170,7 @@ window.PROFILE = {
     {
       kind: "quantum",
       title: "Quantum-ready image segmentation for image forgery localization",
-      where: "DFRWS 2026 · poster · with S. Gyawali & T. N. Dinh",
+      where: "DFRWS USA 2026 · poster · with S. Gyawali & T. N. Dinh",
       date: "2026",
       text: "Image segmentation (for localizing forged regions), minimum vertex cover and graph reconstruction written as one hand-built QUBO and minimized by a single annealing sampler; every result is checked against an exact reference (exhaustive search, max-flow) and reported as an energy gap. Annealer-ready for D-Wave without reformulation.",
       tags: ["QUBO", "simulated annealing", "D-Wave Ocean"],

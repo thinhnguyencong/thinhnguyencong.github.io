@@ -20,6 +20,15 @@ const external = (element, url) => {
 };
 const rich = (text) =>
   text.split(/\*\*(.+?)\*\*/).map((part, index) => (index % 2 ? make("strong", "", part) : part));
+const people = (list) => {
+  const line = make("p", "fine");
+  (list || []).forEach((person, index) => {
+    if (index) line.append(" · ");
+    line.append(person.role + ": ");
+    line.append(person.url ? external(make("a", "", person.name), person.url) : person.name);
+  });
+  return line;
+};
 const when = (date, upcoming) => {
   const element = make("span", "when", date);
   if (upcoming) element.append(make("em", "", "upcoming"));
@@ -126,7 +135,8 @@ byId("publication-list").replaceChildren(
 
     const authors = make("p", "authors");
     item.authors.forEach((author, authorIndex) => {
-      authors.append(make(author.self ? "strong" : "span", "", author.name));
+      const name = make(author.self ? "strong" : "span", "", author.name);
+      authors.append(author.url ? external(make("a", "", author.name), author.url) : name);
       const marks = (author.equal ? "#" : "") + (author.corresponding ? "*" : "");
       if (marks) authors.append(make("sup", "", marks));
       if (authorIndex < item.authors.length - 1) authors.append(", ");
@@ -177,6 +187,7 @@ byId("experience-list").replaceChildren(
     const row = make("article", "item");
     const body = make("div");
     body.append(make("h3", "", item.title), make("p", "", item.institution));
+    if (item.people) body.append(people(item.people));
     row.append(when(item.date), body);
     return row;
   }),
@@ -198,6 +209,7 @@ byId("education-list").replaceChildren(
     const body = make("div");
     body.append(make("h3", "", item.institution), make("p", "", item.degree));
     if (item.detail) body.append(make("p", "fine", item.detail));
+    if (item.people) body.append(people(item.people));
     row.append(when(item.date), body);
     return row;
   }),

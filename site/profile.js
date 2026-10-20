@@ -48,6 +48,10 @@ window.PROFILE = {
       url: "https://doi.org/10.24963/ijcai.2026/258",
     },
     {
+      date: "2026.08",
+      text: "Presented DSN at **IJCAI 2026** (talk + poster), supported by a VCU Department of Computer Science travel award.",
+    },
+    {
       date: "2026.01",
       text: "Started my PhD in Computer Science at Virginia Commonwealth University.",
     },
@@ -59,7 +63,7 @@ window.PROFILE = {
 
   publications: [
     {
-      authors: [{ name: "T. Nguyen-Cong", self: true }, { name: "T. N. Dinh" }],
+      authors: [{ name: "T. Nguyen-Cong", self: true }, { name: "T. N. Dinh", url: "https://thang-dinh.github.io/" }],
       title: "Differentiable Spectral Normalization for Large-Scale Ising Optimization",
       venue: "IJCAI 2026 · pp. 2319–2327",
       links: {
@@ -111,8 +115,15 @@ window.PROFILE = {
     },
     {
       title: "Researcher",
-      institution: "HySonLab (PI: Prof. Truong-Son Hy), University of Alabama at Birmingham",
-      date: "2024 → 2025",
+      institution: "HySonLab, University of Alabama at Birmingham",
+      date: "2024.09 → 2026.04",
+      people: [
+        {
+          role: "PI",
+          name: "Prof. Truong-Son Hy",
+          url: "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+        },
+      ],
     },
     {
       title: "Researcher",
@@ -130,7 +141,7 @@ window.PROFILE = {
     {
       title: "Departmental Travel Award, IJCAI 2026",
       institution: "Department of Computer Science, Virginia Commonwealth University · oral presentation and poster",
-      year: "2026",
+      year: "2026.08",
     },
   ],
 
@@ -140,6 +151,7 @@ window.PROFILE = {
       degree: "Ph.D. in Computer Science",
       date: "2026 → now",
       detail: "Quantum optimization",
+      people: [{ role: "Advisor", name: "Prof. Thang N. Dinh", url: "https://thang-dinh.github.io/" }],
     },
     {
       institution: "Hanoi University of Science and Technology",

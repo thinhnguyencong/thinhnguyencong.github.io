@@ -182,6 +182,16 @@ byId("experience-list").replaceChildren(
   }),
 );
 
+byId("honors-list").replaceChildren(
+  ...profile.honors.map((item) => {
+    const row = make("article", "item");
+    const body = make("div");
+    body.append(make("h3", "", item.title), make("p", "", item.institution));
+    row.append(when(item.year), body);
+    return row;
+  }),
+);
+
 byId("education-list").replaceChildren(
   ...profile.education.map((item) => {
     const row = make("article", "item");

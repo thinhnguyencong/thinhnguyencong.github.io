@@ -190,6 +190,7 @@
     @media (max-width:560px){
       .nav{height:auto;padding:10px 10px 10px 14px}
       .links{display:grid;grid-template-columns:repeat(3,auto);gap:8px 12px}
+      .nav{align-items:flex-start}
     }
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}.caret,.pulse:after,.hero:after{animation:none}
@@ -211,6 +212,7 @@
         <a href="#publications" data-section="publications">|papers⟩</a>
         <a href="#news" data-section="news">|news⟩</a>
         <a href="#experience" data-section="experience">|experience⟩</a>
+        <a href="#honors" data-section="honors">|honors⟩</a>
         <a href="#education" data-section="education">|education⟩</a>
         <a id="cv-link" href="#" target="_blank" rel="noreferrer" hidden>|cv⟩</a>
       </div>
@@ -282,6 +284,13 @@
       <div class="wrap sec">
         <div class="sec-head"><h2>Experience<span class="ket">|work⟩</span></h2></div>
         <div class="list reveal" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section id="honors">
+      <div class="wrap sec">
+        <div class="sec-head"><h2>Honors<span class="ket">|award⟩</span></h2></div>
+        <div class="list reveal" id="honors-list"></div>
       </div>
     </section>
 

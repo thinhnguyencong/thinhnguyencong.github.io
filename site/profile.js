@@ -19,7 +19,7 @@ window.PROFILE = {
     "I work on quantum optimization: how to cast hard combinatorial problems as Ising and QUBO Hamiltonians, and how to solve them well on quantum annealers and on classical hardware at scale. My research spans hardware-aware quantum annealing, spectral and learning-based methods for large-scale Ising optimization, and machine learning on graphs for combinatorial problems. Before my PhD I studied Mathematics and Informatics at Hanoi University of Science and Technology and led an R&D team building blockchain systems.",
   photo: "assets/profile.jpg",
   photoLabel: "|thinh⟩.jpg",
-  email: "", // e.g. your VCU address; leave empty to hide
+  email: "nguyencongt@vcu.edu",
   github: "https://github.com/hydrogen1999",
   orcid: "https://orcid.org/0009-0008-0525-0101",
   linkedin: "https://www.linkedin.com/in/thinhnguyencongphd",
@@ -77,16 +77,16 @@ window.PROFILE = {
 }`,
     },
     {
-      authors: [{ name: "C. T. Nguyen", self: true }, { name: "C. N. Le" }],
+      authors: [{ name: "T. Nguyen-Cong", self: true }, { name: "C. N. Le" }],
       title:
         "Utilizing Layer-2 Blockchain and IPFS Innovations for Establishing a Robust System for Secure Document Signing and Management",
       venue: "JST: Smart Systems and Devices, 34(2), 44–53, 2024",
       links: {
         DOI: "https://doi.org/10.51316/jst.174.ssad.2024.34.2.6",
       },
-      bibtex: `@article{nguyen2024layer2,
+      bibtex: `@article{nguyencong2024layer2,
   title   = {Utilizing Layer-2 Blockchain and IPFS Innovations for Establishing a Robust System for Secure Document Signing and Management},
-  author  = {Nguyen, Cong Thinh and Le, C. Ngoc},
+  author  = {Nguyen-Cong, Thinh and Le, C. Ngoc},
   journal = {JST: Smart Systems and Devices},
   volume  = {34},
   number  = {2},
@@ -96,7 +96,7 @@ window.PROFILE = {
 }`,
     },
     {
-      authors: [{ name: "C. T. Nguyen", self: true }],
+      authors: [{ name: "T. Nguyen-Cong", self: true }],
       title: "Utilizing Blockchain Technology for Enhancing Food Traceability",
       venue: "Vietnam Trade and Industry Review, 2024",
       links: {},
@@ -111,6 +111,11 @@ window.PROFILE = {
     },
     {
       title: "Researcher",
+      institution: "HySonLab (PI: Prof. Truong-Son Hy), University of Alabama at Birmingham",
+      date: "2024 → 2025",
+    },
+    {
+      title: "Researcher",
       institution: "Faculty of Mathematics and Informatics, Hanoi University of Science and Technology",
       date: "2022 → 2024",
     },
@@ -118,6 +123,14 @@ window.PROFILE = {
       title: "R&D Team Leader",
       institution: "Grooo International JSC., Hanoi",
       date: "2021 → 2025",
+    },
+  ],
+
+  honors: [
+    {
+      title: "Departmental Travel Award, IJCAI 2026",
+      institution: "Department of Computer Science, Virginia Commonwealth University · oral presentation and poster",
+      year: "2026",
     },
   ],
 

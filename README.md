@@ -1,6 +1,6 @@
-# hydrogen1999.github.io
+# thinhnguyencong.github.io
 
-Personal academic page of Thinh Nguyen-Cong, live at <https://hydrogen1999.github.io>.
+Personal academic page of Thinh Nguyen-Cong, live at <https://thinhnguyencong.github.io>.
 
 A dependency-free static site in `site/`, deployed by `.github/workflows/pages.yml` on every push to `main`.
 
